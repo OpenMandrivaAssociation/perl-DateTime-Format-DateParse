@@ -47,3 +47,17 @@ rm -rf %buildroot
 %perl_vendorlib/*
 
 
+
+
+%changelog
+* Mon Apr 18 2011 Funda Wang <fwang@mandriva.org> 0.50.0-2mdv2011.0
++ Revision: 654910
+- rebuild for updated spec-helper
+
+* Thu May 06 2010 Michael Scherer <misc@mandriva.org> 0.50.0-1mdv2011.0
++ Revision: 542879
+- import perl-DateTime-Format-DateParse
+
+
+* Thu May 06 2010 cpan2dist 0.05-1mdv
+- initial mdv release, generated with cpan2dist
