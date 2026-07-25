@@ -2,14 +2,14 @@
 %define upstream_version 0.05
 
 Name:       perl-%{upstream_name}
-Version:    %perl_convert_version %{upstream_version}
-Release:    4
+Version:    %{upstream_version}
+Release:    5
 
 Summary:    Parses Date::Parse compatible formats
 License:    GPL+ or Artistic
 Group:      Development/Perl
-Url:        https://search.cpan.org/dist/%{upstream_name}
-Source0:    http://www.cpan.org/modules/by-module/DateTime/%{upstream_name}-%{upstream_version}.tar.gz
+Url:        https://metacpan.org/dist/DateTime-Format-DateParse
+Source0:    https://cpan.metacpan.org/authors/id/J/JH/JHOBLITT/DateTime-Format-DateParse-%{upstream_version}.tar.gz
 
 BuildRequires:	make
 BuildRequires: perl(Date::Parse)
