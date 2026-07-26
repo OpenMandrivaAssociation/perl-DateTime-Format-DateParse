@@ -1,15 +1,13 @@
 %define upstream_name    DateTime-Format-DateParse
-%define upstream_version 0.05
-
 Name:       perl-%{upstream_name}
-Version:    %{upstream_version}
-Release:    5
+Version:    0.05
+Release:    6
 
 Summary:    Parses Date::Parse compatible formats
 License:    GPL+ or Artistic
 Group:      Development/Perl
 Url:        https://metacpan.org/dist/DateTime-Format-DateParse
-Source0:    https://cpan.metacpan.org/authors/id/J/JH/JHOBLITT/DateTime-Format-DateParse-%{upstream_version}.tar.gz
+Source0:    https://cpan.metacpan.org/authors/id/J/JH/JHOBLITT/DateTime-Format-DateParse-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires: perl(Date::Parse)
@@ -24,7 +22,7 @@ BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}
 This module is a compatibility wrapper around the Date::Parse module.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
