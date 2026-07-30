@@ -1,13 +1,14 @@
 %define upstream_name    DateTime-Format-DateParse
+%define upstream_version 0.05
 Name:       perl-%{upstream_name}
-Version:    0.05
-Release:    6
+Version:	0.05
+Release:	1
 
 Summary:    Parses Date::Parse compatible formats
 License:    GPL+ or Artistic
 Group:      Development/Perl
 Url:        https://metacpan.org/dist/DateTime-Format-DateParse
-Source0:    https://cpan.metacpan.org/authors/id/J/JH/JHOBLITT/DateTime-Format-DateParse-%{version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/J/JH/JHOBLITT/DateTime-Format-DateParse-0.05.tar.gz
 
 BuildRequires:	make
 BuildRequires: perl(Date::Parse)
@@ -48,15 +49,3 @@ rm -rf %buildroot
 
 
 
-%changelog
-* Mon Apr 18 2011 Funda Wang <fwang@mandriva.org> 0.50.0-2mdv2011.0
-+ Revision: 654910
-- rebuild for updated spec-helper
-
-* Thu May 06 2010 Michael Scherer <misc@mandriva.org> 0.50.0-1mdv2011.0
-+ Revision: 542879
-- import perl-DateTime-Format-DateParse
-
-
-* Thu May 06 2010 cpan2dist 0.05-1mdv
-- initial mdv release, generated with cpan2dist
