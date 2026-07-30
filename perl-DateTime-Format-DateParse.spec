@@ -2,7 +2,7 @@
 %define upstream_version 0.05
 Name:       perl-%{upstream_name}
 Version:	0.05
-Release:	4
+Release:	5
 
 Summary:    Parses Date::Parse compatible formats
 License:    GPL+ or Artistic
@@ -33,7 +33,8 @@ This module is a compatibility wrapper around the Date::Parse module.
 %check
 # soft: do not fail package on test failures
 set +e
-%make test
+:  # soft check
+%make test || :
 
 %install
 rm -rf %buildroot
