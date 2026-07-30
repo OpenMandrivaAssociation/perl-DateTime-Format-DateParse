@@ -2,7 +2,7 @@
 %define upstream_version 0.05
 Name:       perl-%{upstream_name}
 Version:	0.05
-Release:	5
+Release:	6
 
 Summary:    Parses Date::Parse compatible formats
 License:    GPL+ or Artistic
@@ -11,13 +11,13 @@ Url:        https://metacpan.org/dist/DateTime-Format-DateParse
 Source0:	https://cpan.metacpan.org/authors/id/J/JH/JHOBLITT/DateTime-Format-DateParse-0.05.tar.gz
 
 BuildRequires:	make
+BuildRequires:	perl-devel
 BuildRequires: perl(Date::Parse)
 BuildRequires: perl(DateTime)
 BuildRequires: perl(DateTime::TimeZone)
 BuildRequires: perl(Time::Zone)
 BuildRequires: perl(Module::Build::Compat)
 BuildArch: noarch
-BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 This module is a compatibility wrapper around the Date::Parse module.
@@ -26,18 +26,17 @@ This module is a compatibility wrapper around the Date::Parse module.
 %setup -q -n DateTime-Format-DateParse-0.05
 
 %build
-%{__perl} Makefile.PL INSTALLDIRS=vendor
+perl Makefile.PL INSTALLDIRS=vendor
 
-%make
-
+%make_build
 %check
 # soft: do not fail package on test failures
 set +e
 :  # soft check
+:  # soft check
 %make test || :
 
 %install
-rm -rf %buildroot
 %makeinstall_std
 
 
