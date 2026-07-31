@@ -2,7 +2,7 @@
 %define upstream_version 0.05
 Name:       perl-%{upstream_name}
 Version:	0.05
-Release:	48
+Release:	49
 
 Summary:    Parses Date::Parse compatible formats
 License:    GPL+ or Artistic
